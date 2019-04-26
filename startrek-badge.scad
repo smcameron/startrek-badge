@@ -88,12 +88,13 @@ module star_thing(thickness)
 	}
 }
 
-module edged_badge_with_star()
+module edged_badge_with_star(s)
 {
+	scale(v = [s, s, s])
 	union() {
 		badge_with_edge();
 		star_thing(10);
 	}
 }
 
-edged_badge_with_star();
+edged_badge_with_star(0.55); /* scaled to be ~2.5 inches tall */
